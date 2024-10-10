@@ -1,20 +1,27 @@
+# models:
+#     - name: order_items_dim
+#       description: A table contains all individual line items of all the orders, Can contains multiple lines for a same order
+#       columns:
+#           -name: Order_item_id
+#           description:  A unique id refers to  ProductXOrder level details(PK)
+#           tests:
+#             - not_empty_string
+#           -name: Order_ID 
+#           description: An Id represents the order which can have multiple items under it
+#           -name: Order_date
+#           description: Date when the order has been placed(FK for date_dim)
+#           -name: Fulfilment 
+#           description: This column represents whether this was fulfilled by Merchant/Amazon (Allowable values - Merchant/Amazon)
+#     - name: sku_dim
+#       description : A table contains all SKUS of all the orders
+#       columns:
+#           -name: SKU
+#           description: Stock keeping Unit represents the lot of each itemid	
+#           -name : ASIN
+#           desription: Amazon Specific Identification number which will be unique for a product with respect to variants
+#           -name: Category
+#           description: Category of the respective product like Saree, Dupatta etc.,
 
-version: 2
 
-models:
-  - name: Orders_fact
-    description: ""
-    columns:
-      - name: Amount
-        description: "The primary key for this table"
-        tests:
-          - negative_amount_check
-
-  # - name: my_second_dbt_model
-  #   description: "A starter dbt model"
-  #   columns:
-  #     - name: id
-  #       description: "The primary key for this table"
-  #       data_tests:
-  #         - unique
-  #         - not_null
+    
+      
