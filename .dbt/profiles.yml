@@ -24,16 +24,3 @@ fedex_dbt:
       user: Jagadeep973
       warehouse: COMPUTE_WH
   target: dev
-fedex_dbt_proj:
-  outputs:
-    dev:
-      account: amazon_data
-      database: amazon_db
-      password: '123456'
-      role: ACCOUNTADMIN
-      schema: fedex_analysis_data
-      threads: 1
-      type: snowflake
-      user: jagadeep
-      warehouse: Amazon_wh
-  target: dev
